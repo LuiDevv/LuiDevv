@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .code {
+            background: #e8e8e8;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            overflow-x: auto;
+            white-space: pre;
+            justify-content: center;
+        }
+        .footer {
+            background: #e8e8e8;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            width: 200px;
+            height: 45px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            max-width: 650px;
+            max-height: 200px;
+            margin: 0 auto;
+            justify-content: center;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Practica 2: LP1</h1>
+    <div class="container">
+        <h2>Declaración de Variables</h2>
+        <p>En la consola, se mostrarán las variables y sus tipos de datos.</p>
+        <div class="code">
+            <img src="/tarea2.html/images/image1.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h2>Manipulación de Objetos</h2>
+        <p>En la consola, se mostrarán los cambios en el objeto.</p>
+        <div class="code">
+            <img  id=img2 src="/tarea2.html/images/image2.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h2>Manipulación de Arreglos</h2>
+        <p>En la consola, se mostrarán los cambios en el arreglo.</p>
+        <div class="code">
+            <img  id=img3 src="/tarea2.html/images/image3.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h2>Funciones</h2>
+        <p>En la consola, se mostrarán los resultados de las siguientes funciones.</p>
+
+        <h3>Sumar dos números</h3>
+        <div class="code">
+            <img  id=img4 src="/tarea2.html/images/image4.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h3>Evaluar dos valores con if</h3>
+        <div class="code">
+            <img  id=img5 src="/tarea2.html/images/image5.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h3>Función con do-while</h3>
+        <div class="code">
+            <img  id=img6 src="/tarea2.html/images/image6.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h3>Función con switch</h3>
+        <div class="code">
+            <img  id=img7 src="/tarea2.html/images/image7.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h3>Números del 1 al 100 saltando de 5 en 5</h3>
+        <div class="code">
+            <img  id=img8 src="/tarea2.html/images/image8.png" alt="Imagen del codigo en el script">
+        </div>
+
+        <h3>Arreglo de dos dimensiones con for</h3>
+        <div class="code">
+            <img  id=img9 src="/tarea2.html/images/image9.png" alt="Imagen del codigo en el script">
+        </div>
+    </div>
+    <div class="footer">
+        Luis Tavarez
+    </div>
+    <script>
+        let variableNum1 = "Hola Mundo";
+        let variableNum2 = 2;
+        let array=[];
+
+        /*-Luis Tavarez 
+            -21-1673
+            -La primera parte de la tarea nos pide loguear variables a la consola mostrando su tipo y su value asignado
+        */
+       //Mostrar los tipos
+        console.log("Tipo de la varible 1: " + typeof variableNum1);
+        console.log("Tipo de la variable 2: " + typeof variableNum2);
+
+       //Mostrar el valor asignado
+       console.log("Valor asignado de la variable 1: " + variableNum1);
+       console.log("Valor asignado de la variable 2: " + variableNum2);
+
+       //Parte 2
+
+       //Crear un objeto para agregar y eliminar valores; Crearemos una guitarra
+
+       let guitarra = {
+        marca: "Gibson",
+        color: "Roja",
+        "Tipo de madera": "Roble"
+       };
+       console.log(guitarra);
+
+       //Vamos a agregarle el año donde salio
+
+       guitarra.año = 2020;
+       console.log(guitarra);
+
+       //Ahora vamos a eliminar el color
+
+       delete guitarra.color;
+       console.log(guitarra);
+
+       //Ahora vamos a llamar al array que creamos al principio, como vemos, esta vacio
+       console.log(array);
+
+       //Le vamos a agregar 2 strings
+
+       array.push("Hola","Mundo");  //Este metodo es para agregar elementos al final del array
+       console.log(array);
+
+       //Vamos a agregar otro elemento pero esta vez al principio del array
+
+       array.unshift("1"); //Unshift agrega elementos al principio del array
+       console.log(array);
+
+       //Ahora vamos a elminar '1' y 'Mundo' para que solo quede 'Hola'
+
+       array.shift() //Elimina el primer elemento del array
+       array.pop()  //Elimina el ultimo elemento del array
+
+       console.log(array);
+
+       //EXTRA//
+       //Si queremos eliminar un elemento puntual del array podemos hacerlo utilizando su indice y splice
+
+       array.splice(0)
+       console.log(array);
+
+       //Volvemos a tener nuestro arreglo vacio
+
+       //Ahora vamos a crear todas las funciones
+
+       function suma(a,b){
+        const res = a + b;
+        console.log("Primera funcion: \n \n Resultado de la suma: " + res , "\n");
+
+       }
+       suma(5,5);
+
+       function logic(x,y){
+        console.log("Segunda funcion: \n \n Cual es mayor? X o Y?")
+        if(x > y){
+            console.log("  X es mayor \n")
+        }else if(x === y){
+            console.log("  Son iguales! \n")
+        }
+        else {
+            console.log("  Y es mayor \n")
+        }
+       }
+       logic(1,1);
+
+       function conteo(){
+        let count = 0;
+        console.log("Tercera funcion: \n \n Numeros del 1 al 10: ")
+        do {
+            console.log(count)
+            count++;
+        }while(count < 11);
+       }
+       conteo();
+
+       function switchos(dia){
+        console.log("Cuarta funcion: \n \n Los 5 primeros dias de semana: \n")
+        
+        switch (dia){
+            case 1:
+                console.log("  Lunes es el dia 1 de la semana")
+                break;
+            case 2:
+                console.log("  Martes es el dia 2 se la semana")
+                break;
+            case 3: 
+                console.log("  Miercoles es el dia 3 de la semana")
+                break;
+            case 4:
+                console.log("  Jueves es el dia 4 de la semana")
+                break;
+            case 5:
+                console.log("  Viernes es el dia 5 de la semana")
+                break;
+            default:
+                console.log("  Son solo los primeros 5 dias.")
+        }
+       }switchos(4);
+
+       function cinco(){
+        console.log("Quinta funcion: \n \n Contando de 5 en 5 hasta 100: " )
+        let contador = 0;
+        while(contador < 100){
+            contador+=5;
+            console.log(contador);
+        }
+
+       }
+       cinco();
+       
+       function arr(){
+        console.log("Ultima funcion! \n \n Arreglo multidimensional: ")
+        let arreglo = [[1,2,3],[4,5,6]];
+        for(let i = 0; i < arreglo.length; i++){
+            for(let j = 0; j < arreglo[i].length; j++){
+                console.log(arreglo[i][j]);
+            }
+        }
+
+       }arr();
+    </script>
+</body>
+</html>
